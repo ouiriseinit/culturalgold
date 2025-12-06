@@ -24,12 +24,13 @@
   --text-muted: #d4d4d4;
 }
 
+* { overflow-x: hidden; box-sizing: border-box; padding: 0; margin: 0;}
+
 /* Apply the vibe globally */
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   font-family: sans-serif; /* Swap this for a classy font later */
-  margin: 0;
 }
 
 /* EXAMPLE: How to style your buttons with this */
@@ -41,9 +42,49 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .btn-gold:hover {
   background-color: var(--accent-hover);
+}
+
+header {
+  background-color: var(--bg-panel);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--wood-red);
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+a, a:visited, a:active {
+  color: var(--text-main);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  min-height: 80vh;
+  padding: 20px;
+}
+
+footer {
+  background-color: var(--bg-panel);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 15px;
+  border-top: 4px solid var(--wood-red);
+  margin-top: 20px;
 }
