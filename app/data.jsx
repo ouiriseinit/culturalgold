@@ -1,7 +1,10 @@
 export const featuredCollections = [
   {
     name: "Adé Aṣọ Apparel",
-    symbol: `Adé - Yoruba: Crown`,
+    symbol: [
+      "Adé (Royalty) Yoruba",
+      "Aṣọ (Fabric) Yoruba"
+    ],
     focus: "Premium Nigerian",
     description:
       "Tailored kaftans, elevated Ankara sets, and modern statement pieces designed for intentional, confident style.",
@@ -9,7 +12,10 @@ export const featuredCollections = [
   },
   {
     name: "Ugo Ṣepọ Stride",
-    symbol: `Ugo - Igbo: Distinction`,
+    symbol: [
+      "Ugo  (Prestigious Distinction) Igbo",
+      "Ṣepọ (Connection) Yoruba"
+    ],
     focus: "Curated American",
     description:
       "Authenticated sneakers, luxury heels, and statement boots. Selected for condition, rarity, and cultural flavor.",
@@ -17,17 +23,21 @@ export const featuredCollections = [
   },
   {
     name: "Ori Attars",
-    symbol: `Ori - Hausa–Yoruba: Essence`,
+    symbol: [
+      "Ori (Essence & Spirit) Hausa-Yoruba"
+    ],
     focus: "Luxury",
     description:
       "Bold concentrated oud fragrance oils blended with spice woods, resins, and botanical notes sourced from Dubai.",
     category: "Fragrances"
   },
   {
-  name: "AKU Wellness",
-  symbol: "Aku - Igbo: Vitality",
-  focus: "Premium",
-  description: "A curated collection of botanical tonic bitters, artisanal body butters, soaps, and wellness essentials. Crafted for rejuvination, healing, and functional elegance.",
-  category: "Self-Care"
-}
+    name: "AKU Wellness",
+    symbol: [
+      "Aku (Vitality & Prosperity) Igbo"
+    ],
+    focus: "Premium",
+    description: "A curated collection of botanical tonic bitters, artisanal body butters, soaps, and wellness essentials. Crafted for rejuvenation, healing, and functional elegance.",
+    category: "Self-Care"
+  }
 ];

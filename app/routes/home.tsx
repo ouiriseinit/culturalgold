@@ -2,7 +2,7 @@ import Layout from "~/layout";
 import { featuredCollections } from "~/data"
 import type { JSX } from "react";
 
-interface Collection { name: string, symbol: string, focus: string, description: string, category: string}
+interface Collection { name: string, symbol: string[], focus: string, description: string, category: string}
 
 export default function Home() {
 
@@ -41,7 +41,8 @@ function CollectionCard({ name, symbol, category, focus, description}: Collectio
                         <h4 className="em">{name.toUpperCase()}</h4>
                         <p>{focus} {category}</p>
                         <p>{description}</p>
-                        <p className="right">{symbol}</p>
+
+                        {symbol.map(s => <p className="">{s}</p>)}
                         <a className="btn">View Collection</a>
                     </div>
     )

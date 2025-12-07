@@ -221,6 +221,7 @@ h1, .heading, .em {
 .body {
   font-size: var(--font-body);
 }
+.block { display: block;}
 
 /* Horizontal collections */
 .collections {
@@ -303,11 +304,14 @@ h1, .heading, .em {
 
 #shop {
   margin-top: 44vh;
-  margin-bottom: 16vh; /* todo */
+  margin-bottom: 6rem; /* todo */
   color: var(--bg-dark)
 }
 
 @media (max-width:1000px) {
+  #shop {
+    margin-bottom: 8rem;
+  }
   header {
     flex-direction: column;
     gap: 15px;
