@@ -14,8 +14,8 @@ function Header() {
         <a href='/'><h1>Cultural Gold</h1></a>
         <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a href="/culturalgold/">Home</a></li>
+            <li><a href="/culturalgold/about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         </nav>    
@@ -27,7 +27,7 @@ function Footer() {
     return (
         <footer className="footer">
       <form className="contact-form">
-        <a href="contact.html"><h2 className="strong">Contact Us</h2></a>
+        <h2 className="strong">Contact Us</h2>
         <label>
           Name
           <input type="text" name="name" placeholder="Your name" />
@@ -46,7 +46,7 @@ function Footer() {
     </address>
     </section>
     <section className="socials">
-    <a href="index.html" className="logo">
+    <a href="/culturalgold/" className="logo">
         <h2 className="heading">Cultural Gold</h2>
       </a>
       </section>
