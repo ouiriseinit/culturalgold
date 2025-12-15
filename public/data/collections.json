@@ -1,9 +1,8 @@
 [
   {
-    "name": "Adé Aṣọ Apparel",
+    "name": "Adé Apparel",
     "symbol": [
-      "Adé (Royalty) Yoruba",
-      "Aṣọ (Fabric) Yoruba"
+      "Adé (Royalty) Yoruba"
     ],
     "focus": "Premium Nigerian",
     "description": "Tailored kaftans, elevated Ankara sets, and modern statement pieces designed for intentional, confident style.",
@@ -29,9 +28,8 @@
     "category": "Self-Care"
   },
   {
-    "name": "Ugo Ṣepọ Stride",
+    "name": "Ṣepọ Stride",
     "symbol": [
-      "Ugo (Prestigious Distinction) Igbo",
       "Ṣepọ (Connection) Yoruba"
     ],
     "focus": "Curated American",

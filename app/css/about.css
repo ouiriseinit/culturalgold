@@ -1,10 +1,14 @@
-main.about {
+main {
     display: flex;
-    min-height: 70vh;
+    min-height: 80vh;
     flex-direction: column;
     gap: 5vh;
-    max-width: 90%;
-    margin: auto;
+    width: 60vw;
+    margin: auto;  
+}
+
+main p {
+    
 }
 main ul {
     display: grid;

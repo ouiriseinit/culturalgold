@@ -13,7 +13,7 @@ Overarching Theme: Directional Resonance – Every element, every design decisio
 
 Color Palette:
 
-Terracotta (#E07C2E) – Rich, earthy, reminiscent of clay and sun-baked landscapes. Used to frame key elements, draw the eye to points of connection.
+Terracotta (`#E07C2E`) – Rich, earthy, reminiscent of clay and sun-baked landscapes. Used to frame key elements, draw the eye to points of connection.
 Indigo (#3F51B5) – Deep, contemplative, evoking the spirit of the night sky. Used to create flow, movement, and an invitation forward – like a pathway leading back to the source.
 Accent: Ochre (#C6A92E) – Warm, inviting, representing the bounty of the earth.
 Typography:
@@ -56,7 +56,7 @@ Product Description (Example): “This handwoven scarf is more than just fabric;
 
 About Us Paragraph: “At Cultural Gold, we believe that true luxury lies not in extravagance, but in authenticity. We work directly with African artisans, supporting their traditions and ensuring that every piece reflects their extraordinary skill and dedication. We are curators of culture, champions of craftsmanship, and guardians of a timeless legacy."
 
-Instagram Caption (Example): "Lost in the rhythm of creation. ✨ Each piece carries a story, a heartbeat. #CulturalGold #AfricanArt #Heritage”
+Instagram Caption (Example): "Found in the rhythm of creation. ✨ Each piece carries a story, a heartbeat. #CulturalGold #AfricanArt #Heritage”
 
 Note: This is a living document – constantly evolving. The light and dark themes offer versatility and cater to diverse aesthetic preferences. Let’s continue the journey together.
 

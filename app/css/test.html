@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swirling Letters</title>
+  <style>
+    /* Styles for the container and elements */
+    #container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f0f2e, #242447);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .letter {
+      position: absolute;
+      font-size: 12px;
+      pointer-events: none;
+      animation: swirl 5s linear infinite;
+      color: #ffffff;
+    }
+
+    @keyframes swirl {
+      0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: rotate(180deg) scale(1.5);
+        opacity: 0.5;
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .word {
+      position: absolute;
+      font-size: 100px;
+      font-weight: bold;
+      color: #ffffff;
+      animation: formWord 2s forwards;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    @keyframes formWord {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    // JavaScript to generate the swirling letters and word animation
+    const container = document.getElementById('container');
+    const letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+    // Generate swirling letters
+    for (let i = 0; i < 200; i++) {
+      const letter = document.createElement('div');
+      letter.className = 'letter';
+      letter.textContent = letters[Math.floor(Math.random() * letters.length)];
+      letter.style.left = Math.random() * 100 + 'vw';
+      letter.style.top = Math.random() * 100 + 'vh';
+      container.appendChild(letter);
+    }
+
+    // Create the word "appa" and add it to the container
+    const word = document.createElement('div');
+    word.className = 'word';
+    word.textContent = 'appa';
+    container.appendChild(word);
+
+    // Show the word after a delay
+    setTimeout(() => {
+      word.style.display = 'block';
+    }, 1000);
+
+    // Hide the word and return to swirling state after a while
+    setTimeout(() => {
+      word.style.display = 'none';
+    }, 6000);
+  </script>
+</body>
+</html>

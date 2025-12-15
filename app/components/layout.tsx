@@ -1,3 +1,5 @@
+import '~/css/app.css'
+
 export default function GlobalLayout({ children }: { children: React.ReactNode }) { 
     return (
         <body>
@@ -11,7 +13,7 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
 function Header() {
     return (
         <header>
-        <a href='/culturalgold/'><h1>Cultural Gold</h1></a>
+        <h1><a  href='/culturalgold/'>Cultural Gold</a></h1>
         <nav>
         <ul>
             <li><a href="/culturalgold/#shop">Shop</a></li>
@@ -31,6 +33,7 @@ function Footer() {
     return (
     <footer className="footer">
         <section className="links">
+            <a className="heading" href="/"><h2 className="em">Cultural Gold</h2></a>
             <h2 className="strong">Get Connected</h2>
             <a href="mailto:culturalgold79@gmail.com">culturalgold79@gmail.com</a>
             <a href="tel:+(980) 800-2822">(980) 800-2822</a>
@@ -41,14 +44,16 @@ function Footer() {
             </div>
         </section>
 
-              <a className="em" href="/"><h2 className="em">Designed and Developed with Ourise.Initiative</h2></a>
-
       
         <form id="contact" className="contact-form">
             <h2 className="strong">Contact Us</h2>
             <label>
                 Name
-                <input type="text" name="name" placeholder="Your name" />
+                <input type="text" name="name" placeholder="" />
+            </label>
+            <label>
+                Email
+                <input type="email" name="name" placeholder="" />
             </label>
             <label>
                 Message

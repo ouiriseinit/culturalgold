@@ -1,0 +1,242 @@
+/* === Global Styles === */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kedebideri:wght@400;500;600;700;800;900&family=Ojuju:wght@200..800&family=Shadows+Into+Light&family=Smooch&display=swap');
+
+:root {
+  --font-em: 'Ojuju', cursive;
+  --font-heading: 'Ojuju', cursive;
+  --font-strong: 'Bebas Neue', sans-serif;
+  --font-body: 'Kedebideri', sans-serif;
+  --font-ital: 'Shadows Into Light', cursive;
+  /* --- The Canvas (Backgrounds) --- */
+  /* That rich dark charcoal from the card background */
+  --bg-dark: #1a1a1a;
+  /* Slightly lighter for cards/sections */
+  --bg-panel: rgba(38, 38, 38, 0.5);
+
+  /* --- The 'Gold' (Accents) --- */
+  /* The Terracotta/Clay from the headwrap - USE FOR BUTTONS */
+  --accent-primary: #E07C2E;
+  /* A lighter version for hover states */
+  --accent-hover: #a34b2d;
+
+  /* --- The Culture (Secondary) --- */
+  /* The deep mahogany/wood red from the borders */
+  --wood-red: #5e1e1e;
+  /* The skin tone bronze for subtle details */
+  --highlight: #d7a93b;
+  --text-main: #fff;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.3rem;
+  letter-spacing: .03rem;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+p, li, span {
+  line-height: 1.2rem;
+  letter-spacing: .03rem;
+}
+
+main {
+  padding-bottom: 1rem;
+}
+
+/* Make headers pop */
+h1, .heading, .em {
+  font-size: 2rem;
+  font-family: var(--font-em);
+  letter-spacing: 5px;
+}
+h1, .heading {
+  background-clip: content-box;
+  background-image: linear-gradient(90deg var(--accent-hover), var(--accent-primary));
+}
+h2 {
+  line-height: 2rem;
+  font-size: 2rem;
+}
+.strong {
+  font-family: var(--font-strong);
+  font-size: 2rem;
+}
+.ital {
+  font-family: var(--font-ital);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+header {
+  padding: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 100vw;
+  background: var(--bg-dark);
+  border-bottom: solid var(--wood-red) 0.3rem;
+  z-index: 9;
+
+}
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+header a {
+  font-size: 1.5rem;
+  font-family: var(--font-strong);
+}
+
+main {
+  padding-top: 1rem;
+}
+a {
+  text-decoration: none;
+  transition: all 0.13s ease;
+  color: var(--accent-primary)
+}
+a:hover {
+  color: #fff;
+}
+main a, main a:visited {
+  background: var(---bg-panel);
+  border-radius: 6px;
+  padding: 1rem;
+}
+main a:hover {
+  background: var(--wood-red);
+}
+main a:active {
+  background: var(--accent-primary);
+}
+h1 a {
+  font-family: var(--font-heading)
+}
+header a {
+  background: rgba(0,0,0,0);
+  color: var(--highlight);
+}
+header a:hover {
+  background: rgba(0,0,0,0);
+  text-decoration: underline;
+  color: var(--wood-red);
+}
+header a:active {
+  color: var(--accent-primary);
+}
+h1 a {
+  font-size:3rem;
+}
+
+section, .card {
+  border: solid black 1px;
+  border-radius: 20px;
+}
+
+button, .button, .btn {
+  padding: 1rem;
+  font-family: var(--font-strong);
+  line-height: 3rem;
+  font-size: 4rem;
+  background: none;
+  border: none;
+}
+.small {
+  font-size: 1.5rem
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-top: 3px solid var(--wood-red);
+  padding: 1rem;
+}
+footer * {
+  transition: all 0.2s ease;
+}
+footer form, footer section {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border: solid black 1px;
+  border-radius: 10px;
+  padding: 1rem;
+  justify-content: space-between;
+}
+  
+footer label {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  gap: 0.5rem;
+  text-align: left;
+  color: var(--highlight);
+}
+input, textArea {
+  padding: 0.5rem;
+  transition: all 0.15s ease;
+  background: var(--bg-panel);
+  min-height: 4rem;
+  border: none;
+  border-radius: 4px;
+}
+textArea {
+  height: 8rem;
+}
+input:focus, textArea:focus {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+footer section {
+  display: grid;
+  grid-template-columns: auto;
+}
+footer section h2 {
+  grid-column: 1/3;
+}
+footer a {
+  color: var(--highlight);
+  font-family: var(--font-heading);
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+}
+footer > a:hover {
+  background: var(--bg-panel);
+  border-radius: 4px;
+  padding: 1rem;
+  width: 50%;
+  
+}
+footer section div {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  grid-column: 1/3;
+  height: fit-content;
+}
+textArea {height: fit-content;}
+.social {
+  
+}

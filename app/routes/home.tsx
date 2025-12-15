@@ -1,6 +1,7 @@
-import Layout from "~/layout";
+import Layout from "~/components/layout";
 import type { JSX } from "react";
 import { useEffect, useState } from "react";
+import '~/css/home.css'
 
 interface Collection {
   name: string;
@@ -13,26 +14,34 @@ export default function Home() {
   const [collections, setCollections] = useState<Collection[]>([]);
 
   useEffect(() => {
-    fetch("public/data.json")
+    fetch("public/data/collections.json")
       .then((res) => res.json())
       .then((data) => setCollections(data));
   }, []);
 
+  const scrollToElement = (event: React.MouseEvent, id: string, padding: number = 0) => {
+  event.preventDefault();
+  const element = document.getElementById(id);
+  if (element) {
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY - padding;
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+  }}
+
   return (
     <Layout>
-            <article className="hero">
-            <section>
-            <h2 className="ital"><span className="em">Cultural</span>Infused Goods</h2>
-            <h3 className="ital">Priceless beyond <span className="em">Gold</span></h3>
-            <a className="btn" href="#shop">SHOP NOW</a>
-            </section>
-            </article>
+      <article className="hero">
+      <h2>Welcome to <span className="em">Cultural Gold!</span></h2>
+      <p>Celebrating the love and enduring spirit of Africa</p>
+      <p><span className="ital">The vibrant creativity</span>,<span className="heading small"> the rich stories</span>, <span className="strong small">the enduring legacy</span></p>
+      <p>We invite to connect and rediscover the <span className="ital">beauty</span> that resides <span className="strong small">within</span></p>
+      <a className="btn" onClick={(e) => scrollToElement(e, 'shop')}>Unearth Your Legacy</a>
+      </article>
 
-            <div id="shop">.</div>
-      <h2 className="ital center">Cultural Collections</h2>
+      <div id="shop">/</div>
+      <h2 className="strong center">Goods infused with Culture</h2>
 
-            <article className="collections">
-                {collections.slice(0, 2).map((collection: Collection): JSX.Element => (
+      <article className="collections">
+        {collections.map((collection: Collection): JSX.Element => (
           <CollectionCard
             key={collection.name}
             name={collection.name}
@@ -41,20 +50,8 @@ export default function Home() {
             focus={collection.focus}
             description={collection.description}
           />
-                ))}
-            </article>
-            <article className="collections">
-            {collections.slice(2, 4).map((collection: Collection): JSX.Element => (
-          <CollectionCard
-            key={collection.name}
-            name={collection.name}
-            symbol={collection.symbol}
-            category={collection.category}
-            focus={collection.focus}
-            description={collection.description}
-          />
-                ))}
-            </article>
+        ))}
+        </article>
         </Layout>
   );
 }
@@ -62,13 +59,13 @@ export default function Home() {
 function CollectionCard({ name, symbol, category, focus, description }: Collection) {
     return (
         <div className="card collection" key={name}>
-                        {/* <img src={`/images/${category}.jpg`} alt={name} /> */}
-                        <h4 className="em">{name.toUpperCase()}</h4>
-                        <p>{focus} {category}</p>
-                        <p>{description}</p>
+          {/* <img src={`/images/${category}.jpg`} alt={name} /> */}
+          <h4 className="em">{name.toUpperCase()}</h4>
+          <p>{focus} {category}</p>
+          <p>{description}</p>
 
-                        {symbol.map(s => <a href="/culturalgold/about" className="right">{s}</a>)}
-                        <a className="btn">View Collection</a>
-                    </div>
+          <a href="/culturalgold/about" className="right">{symbol}</a>
+          <a className="btn" href={`/culturalgold/collections/${category.toLowerCase()}`}>View Collection</a>
+      </div>
   );
 }

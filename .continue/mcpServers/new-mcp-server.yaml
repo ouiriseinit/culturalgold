@@ -1,0 +1,14 @@
+name: Playwright mcpServer
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: Fetch
+    command: npx
+    args:
+      - "@playwright/mcp@latest"
+  - name: Search
+    command: npx
+    args:
+      - -y
+      - '@oevortex/ddg_search@latest'
+    env: {}
