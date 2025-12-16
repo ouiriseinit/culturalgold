@@ -34,7 +34,7 @@ export default function Home() {
       <p>Celebrating the love and enduring spirit of Africa</p>
       <p><span className="ital">The vibrant creativity</span>,<span className="heading small"> the rich stories</span>, <span className="strong small">the enduring legacy</span></p>
       <p>We invite to connect and rediscover the <span className="ital">beauty</span> that resides <span className="strong small">within</span></p>
-      <a className="btn" onClick={(e) => scrollToElement(e, 'shop')}>Unearth Your Legacy «</a>
+      <a className="btn" onClick={(e) => scrollToElement(e, 'shop')}><span>»</span> Explore Legacy <span>«</span></a>
       </article>
 
       <div id="shop">/</div>
@@ -64,7 +64,7 @@ function CollectionCard({ name, symbol, category, focus, description }: Collecti
 
   }
     return (
-        <div className="card collection" key={name}>
+        <div className="card collection-card" key={name}>
           {/* <img src={`/images/${category}.jpg`} alt={name} /> */}
           <h4 className="em">{name.toUpperCase()}</h4>
           <p>{focus} {category}</p>

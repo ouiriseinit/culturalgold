@@ -4,7 +4,7 @@
     "symbol": [
       "Adé (Royalty) Yoruba"
     ],
-    "focus": "Premium Nigerian",
+    "focus": "Premium",
     "description": "Tailored kaftans, elevated Ankara sets, and modern statement pieces designed for intentional, confident style.",
     "category": "Clothing"
   },
@@ -35,6 +35,24 @@
     "focus": "Curated American",
     "description": "Authenticated sneakers, luxury heels, and statement boots. Selected for condition, rarity, and cultural flavor.",
     "category": "Footwear"
+  },
+  {
+    "name": "Ndeye Jewelry",
+    "symbol": [
+      "Ndeye (Grace) Wolof"
+    ],
+    "focus": "Elegant",
+    "description": "Handcrafted gold and silver jewelry inspired by West African motifs, featuring intricate beadwork and traditional symbols of protection and prosperity.",
+    "category": "Jewelry"
+  },
+  {
+    "name": "Kanuri Bags",
+    "symbol": [
+      "Kanuri (Strength) Kanuri"
+    ],
+    "focus": "Premium",
+    "description": "Luxury tote bags and crossbody bags made from premium leather and traditional Kanuri patterns, designed for both style and functionality.",
+    "category": "Bags"
   }
 ]
 

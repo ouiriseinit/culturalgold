@@ -13,7 +13,15 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
 function Header() {
     return (
         <header>
-        <h1><a  href='/culturalgold/'>Cultural Gold</a></h1>
+        <h1>
+            <a  href='/culturalgold/'>Cultural 
+            <img src='/culturalgold/images/logo-removebg-preview.png' alt="An elegant woman crowned with an orange headscarf and wearing golden earings" />
+            Gold</a>
+            
+        </h1>
+        
+        
+        
         <nav>
         <ul>
             <li><a href="/culturalgold/#shop">Shop</a></li>
@@ -37,6 +45,8 @@ function Footer() {
     <footer className="footer">
         <section className="links">
             <h2 className="strong">Get Connected</h2>
+            <img src='/culturalgold/images/logo-alt-removebg-preview.png' alt="An elegant woman crowned with an orange headscarf and wearing golden earings" />
+
             <div className="column">
             <a href="mailto:culturalgold79@gmail.com">culturalgold79@gmail.com</a>
             <a href="tel:+(980) 800-2822">(980) 800-2822</a>

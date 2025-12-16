@@ -2,6 +2,7 @@
 
 main {
   padding: 20px;
+  padding-top: 20vh;
 }
 
 .hero {
@@ -18,6 +19,7 @@ main {
   min-height: 300px;
   align-items: center;
   background: linear-gradient(-30deg, rgba(255,255,255, 0.1), rgba(12,12,12, 0.1));
+  position: relative;
 }
 .hero h2 {
     text-align: center;
@@ -30,16 +32,32 @@ main {
   border: solid var(--wood-red) 2px;
   padding: 2rem;
   margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.2s ease;
+  align-items: center;
+}
+.hero a:hover {
+  gap: 0.25rem;
 }
 
 .card {
   background: var(--bg-panel);
-  padding: 16px;
+  padding: 1rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
   font-size: 1.2rem;
   width: 600px;
+  height: fit-content;
+}
+.card a, .card .btn {
+  width: 50%;
+  text-align: center;
+}
+.card .btn {
+  font-size: 4rem;
 }
 
 .center {
@@ -50,6 +68,10 @@ main {
   margin-left: auto;
   margin-right: 16px;
   text-align: right;
+}
+
+p.desc {
+  height: 10vh;
 }
 
 /* Buttons inside collection cards */
@@ -83,10 +105,6 @@ main {
   margin-bottom: 3rem;
   border-radius: 1rem;
   min-width: 250px;
-  position: relative;
-}
-.collection a {
-  position: relative;
 }
 
 /* Smooth fade-in for shop */
@@ -103,7 +121,12 @@ main {
   #shop {
     margin-bottom: 16vh;
   }
-  
+  p.desc {
+    height: 25vh;
+  }
+  .hero a {
+    font-size: 2rem;
+  }
 }
 
 /* Tablet */
