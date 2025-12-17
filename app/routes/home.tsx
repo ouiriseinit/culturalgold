@@ -22,14 +22,13 @@ export default function Home() {
   return (
     <Layout>
       <article className="hero">
+      <img src="/culturalgold/images/castle-row.png" alt="" />
+      <div className="overlay">.</div>
       <h2>Welcome to <span className="em">Cultural Gold!</span></h2>
       <p>Celebrating the love and enduring spirit of Africa</p>
-      <div className="img-container">
-        <div className="overlay"></div>
-        <img src="/culturalgold/images/castle-row.png" alt="from left to right: castle, a woman in a beautifully powerful pose, a tribe of men jumping, a man sitting holding up his left fist, African masks" />
-      </div>
-      <p><span className="ital">The vibrant creativity</span>,<span className="heading small"> the rich stories</span>, <span className="strong small">the enduring legacy</span></p>
-      <p>We invite to connect and rediscover the <span className="ital">beauty</span> that resides <span className="strong small">within</span></p>
+      
+      <p><span className="ital">The vibrant creativity</span> <br /> <span className="heading small"> the rich stories</span> <br /> <span className="strong small">the enduring legacy</span></p>
+      <p>We invite to connect and rediscover the <br /> <span className="ital">beauty</span> that resides <span className="strong small">within</span></p>
       
       <a className="btn" href="#shop"><span>»</span> Explore OUR Legacy <span>«</span></a>
       </article>
@@ -65,10 +64,11 @@ function CollectionCard({ name, symbol, category, focus, description }: Collecti
         <div className="card collection-card" key={name}>
           {/* <img src={`/images/${category}.jpg`} alt={name} /> */}
           <h4 className="em">{name.toUpperCase()}</h4>
+          <a href="/culturalgold/about">{symbol}</a>
           <p>{focus} {category}</p>
           <p className='desc'>{description}</p>
 
-          <a href="/culturalgold/about" className="right">{symbol}</a>
+          
           <a className="btn" onClick={(e) => sendMessage(e)} href={`/culturalgold/collections/${category.toLowerCase()}`}>View Collection</a>
       </div>
   );

@@ -1,5 +1,14 @@
 [
   {
+    "name": "Aṣẹ Artisanal",
+    "symbol": [
+      "Aṣẹ (Power) Yoruba"
+    ],
+    "focus": "Handmade",
+    "description": "Unique, handcrafted items such as pottery, textiles, and wood carvings that reflect the rich artistic traditions of the Yoruba people.",
+    "category": "Artisanal"
+  },
+  {
     "name": "Adé Apparel",
     "symbol": [
       "Adé (Royalty) Yoruba"
@@ -44,15 +53,6 @@
     "focus": "Cultural",
     "description": "Handcrafted jewelry, scarves, and bags inspired by Yoruba traditions. Each piece tells a story of heritage, artistry, and cultural pride.",
     "category": "Accessories"
-  },
-  {
-    "name": "Aṣẹ Artisanal",
-    "symbol": [
-      "Aṣẹ (Power) Yoruba"
-    ],
-    "focus": "Handmade",
-    "description": "Unique, handcrafted items such as pottery, textiles, and wood carvings that reflect the rich artistic traditions of the Yoruba people.",
-    "category": "Artisanal"
   }
 ]
 

@@ -11,14 +11,14 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
 }
 
 function Header() {
-    // const handleShopClick = (event: MouseEvent) => {
-    //     event.preventDefault();
-    //     if (window.location.pathname === '/culturalgold/') {
-    //         document.querySelector('#shop')?.scrollIntoView({ behavior: 'smooth' });
-    //     } else {
-    //         window.location.href = '/culturalgold/#shop';
-    //     }
-    // }
+    const handleShopClick = (event: MouseEvent) => {
+        event.preventDefault();
+        if (window.location.pathname === '/culturalgold/') {
+            document.querySelector('#shop')?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            window.location.href = '/culturalgold/#shop';
+        }
+    }
     return (
         <header>
         <h1>
@@ -28,15 +28,7 @@ function Header() {
             
         </h1>
         
-        
-        
-        <nav>
-        <ul>
-            <li><a href="/culturalgold/#shop">Shop</a></li>
-            <li><a href="/culturalgold/about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        </nav>    
+        <Nav />
         </header>
     )
 }
@@ -85,5 +77,17 @@ function Footer() {
             
         </form>
   </footer>
+    )
+}
+
+function Nav() {
+    return (
+    <nav>
+        <ul>
+            <li><a href="/culturalgold/#shop">Shop</a></li>
+            <li><a href="/culturalgold/about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>    
     )
 }

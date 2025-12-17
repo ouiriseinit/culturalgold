@@ -2,10 +2,11 @@
 
 main {
   padding: 20px;
-  padding-top: 20vh;
 }
 
 .hero {
+  --img-right: -25%;
+  --img-left: calc(var(--img-right) * -1);
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -13,7 +14,7 @@ main {
   padding: 2rem;
   justify-content: center;
   gap: 2rem;
-  border-radius: 16px;
+  border-radius: 4px;
   font-size: 1.5rem; /* Increased font size */
   height: 80vh;
   width: 100vw;
@@ -24,59 +25,29 @@ main {
   scrollbar-width: none;
   scrollbar-color: transparent;
   z-index: 5;
+  margin-top: 12vh;
 }
 .hero * {
-  z-index: 2;
+  z-index: 3;
 }
-.hero h2 {
+.hero h2, .hero p {
     text-align: center;
   }
 .hero p, .hero h2 {
   line-height: 2rem;
   z-index: 3;
 }
-.hero a {
-  background: var(--bg-panel);
-  border: solid var(--wood-red) 2px;
-  padding: 2rem;
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  transition: all 0.2s ease-in-out;
-  align-items: center;
-}
-.hero a:hover {
-  gap: 0.25rem;
-}
-.hero .img-container {
-  position: absolute;
+.hero img {
+  display: block;
+  min-width: 2266px;
+  width: auto;
   height: 100%;
-  min-width: 200vw;
-  top: 0;
-  z-index: 2;
-  border-radius: 1rem;
-  transition: all ease 9s;
-}
-.hero:hover .img-container {
-  transform: translateX(37.6%);
-  opacity: 1; 
+  position: absolute;
+  z-index: 1;
+  aspect-ratio: 5.78 / 1;
+  animation: slide infinite 30s ease-in-out;
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(38,38,38, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index:3;
-  border-radius: 1rem;
-}
-.hero img {
-  height: 100%;
-  width: 200vw;
-  border-radius: 1rem;
-}
 
 
 /* Smooth fade-in for shop */
@@ -97,17 +68,26 @@ main {
   height: fit-content;
 }
 .card a, .card .btn {
-  width: 50%;
-  text-align: center;
+  background: var(--bg-panel);
+  padding: 2rem;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
 }
 .card .btn {
-  font-size: 4rem;
+  font-size: 2rem;
+  line-height: 1rem;
+  width: 50%;
+  text-align: center;
+  border: solid var(--wood-red) 2px;
 }
-
+.overlay {
+  height: calc(100% + 20px);
+  border: solid red 1px;
+}
 .center {
   text-align: center;
 }
-
 .right {
   margin-left: auto;
   margin-right: 16px;
@@ -157,14 +137,21 @@ p.desc {
 
 /* Mobile*/
 @media (max-width: 769px) {
+  main {
+    
+    padding: 0;
+  }
   .hero {
-    padding: 1rem;
+    --img-right: -1800px;
+    --img-left: 1800px;
+    padding: 2rem;
     height: fit-content;
-    width: 98vw;
-    margin-top: 10vh;
+    width: 100vw;
+    border-radius: 2px;
   }
   #shop {
     margin-bottom: 16vh;
+    margin-top: 14vh;
   }
   p.desc {
     height: 25vh;
@@ -176,7 +163,25 @@ p.desc {
   #shop {
     margin-top: -10vh;
   }
-
+  .hero img {
+    min-width: 4000px;
+    height: 100%;
+  }
+  .card {
+    width: 95vw;
+    margin: auto;
+    min-height: fit-content;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card a {
+    width: 100%;
+  }
+  .card .btn {
+    width: 100%;
+  }
 }
 
 /* Tablet */
@@ -192,7 +197,21 @@ p.desc {
 
 /* Desktop */
 @media (min-width: 1025px) {
-.hero .img-container {
-  right: -1%;
+.hero img {
+  height: 100%;
+  min-width: 3600px;
 }
 }
+
+@keyframes slide {
+    
+    0% {
+        transform: translateX(var(--img-right));
+    }
+    50% {
+      transform: translateX(var(--img-left));
+    }
+    100% {
+      transform: translateX(var(--img-right));
+    }
+  }
