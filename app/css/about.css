@@ -1,132 +1,88 @@
-body {
-  margin: 0;
+/* about. css */
+/* ===== Media Queries ===== */
+@media only screen and (max-width: 576px) {
+  /* Extra small devices (phones - portrait) */
 }
-body * {
-  max-width: 100vw;
-}
-main {
-    width: 100;
-    min-height: 88vh;
-    margin-top: 12vh;
-    position: relative;
-    padding: 0;
-  }
 
-main article, main .container {
-  display: flex;
-  flex-direction: column;
-  display: flex;
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  /* Small devices (portrait tablets and large phones) */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* Medium devices (landscape tablets and small desktops) */
+}
+
+@media only screen and (min-width: 993px) {
+  /* Large devices (desktops and laptops) */
+}
+
+/* ===== Main Section ===== */
+main {
+  --margin: 10vh;
   min-height: 100vh;
-  height: 100%;
-  flex-direction: column;
-  gap: 5vh;
+  height: fit-content;
+  margin: var(--margin) 0;
   width: 100vw;
-  
 }
-.container {
-  gap: 10vh;
-  height: 200vh;
-}
-main article * {
-  width: calc(60vw - 4rem);
-  padding: 2rem;
-}
-main article p {
-  margin-bottom: 20vh;
-  z-index: 3;
-}
-p.last {
-  margin-bottom: 0;
-}
-main .container img, main p {
-  display: block;
-  max-width: 28vw;
-  min-height: fit-content; 
-}
-main p:nth-last-child(1) {
-  margin-bottom: 0;
-}
-main p, main h2 {
-  z-index: 3;
-}
+
 main h2 {
-  padding-top: 4rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 main img {
+  display: block;
+  max-width: 100vw;
   z-index: 1;
-  height: 392px;
 }
-.overlay {
-  background-color: rgba(12,12,12, 0.1);
-  z-index: 5;
+
+/* ===== Text Styling ===== */
+p {
+  line-height: 1.6;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Image & Text Overlay Container ===== */
+.container {
+  position: relative;
   width: 100%;
-  height: 100%;
+}
+
+.image {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-}
-last {
-  margin-bottom:  0;
-}
-@media (max-width: 769px) {
-  main {
-    width: 100vw;
-    padding: 2rem 0 0;
-    height: 92vh;
-    position: relative;
-    overflow: hidden;
-  }
-  main img {
-    min-width: 30vh;
-    position: relative;
-    left: 40vw;
-    top: 20vh;
-    margin-top: 16vh;
-    z-index: 0;
-  }
-  main img.last {
-    margin-bottom: 0;
-  }
-  main h2, main p {
-    min-width: 100vw;
-  }
-  article {
-    min-width: 100vw;
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    left: 0;
-  }
-  .container {
-    min-height: 600vh;
-  }
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease- in- out;
 }
 
-/* Tablet */
-@media (min-width: 769px) {
+/* Hover effect: fade out on hover */
+.image:hover {
+  opacity: 0.7;
 }
 
-/* Desktop */
-@media (min-width: 1025px) {
-  main {
-    height: 300vh;
-  }
-  .container {
-    position: relative;
-    left:28vw;
-  }
-  main .center-text, main .side {
-    position: relative;
-  }
-  .center-text {
-    left: 26vw;
-    color: var(--highlight);
-  }
-  .side {
-    right: 26vw;
-  }
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate();
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Optional: enhance text overlay on hover */
+.text-overlay:hover {
+  opacity: 1;
 }

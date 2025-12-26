@@ -51,7 +51,7 @@ main {
 }
 
 /* Make headers pop */
-h1,    ading, .em {
+h1, .heading, .em {
   font-size: 2rem;
   font-family: var(--font-em);
   letter-spacing: 5px;

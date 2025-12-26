@@ -11,14 +11,6 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
 }
 
 function Header() {
-    const handleShopClick = (event: MouseEvent) => {
-        event.preventDefault();
-        if (window.location.pathname === '/culturalgold/') {
-            document.querySelector('#shop')?.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            window.location.href = '/culturalgold/#shop';
-        }
-    }
     return (
         <header>
         <h1>
@@ -33,11 +25,11 @@ function Header() {
     )
 }
 
-import { SocialIcon } from 'react-social-icons/component'
-import 'react-social-icons/instagram'
-import 'react-social-icons/facebook'
+    import { SocialIcon } from 'react-social-icons/component'
+    import 'react-social-icons/instagram'
+    import 'react-social-icons/facebook'
 
-function Footer() {
+    function Footer() {
     const sendMessage = () => {
         alert('demo only')
     }
@@ -58,34 +50,42 @@ function Footer() {
             </div>
         </section>
 
-      
-        <form id="contact" className="contact-form">
+    
+        <form id="contact" className="contact-form" action="https://contact-eight-black.vercel.app/api/send" method="POST">
             <h2 className="strong">Contact Us</h2>
             <label>
                 Name
-                <input type="text" name="name" placeholder="" />
+                <input type="text" name="name" required/>
             </label>
             <label>
                 Email
-                <input type="email" name="name" placeholder="" />
+                <input type="email" name="email" placeholder="" required/>
             </label>
             <label>
                 Message
                 <textarea name="message" placeholder="Your message"></textarea>
             </label>
-            <button className="btn" type="button" onClick={sendMessage}>Send</button>
+            <input type="submit" value="Send Message" />
             
         </form>
-  </footer>
+    </footer>
     )
 }
 
 function Nav() {
+    const handleShopClick = (event: MouseEvent) => {
+        event.preventDefault();
+        if (window.location.pathname === '/culturalgold/') {
+            document.querySelector('#shop')?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            window.location.href = '/culturalgold/#shop';
+        }
+    }
     return (
     <nav>
         <ul>
-            <li><a href="/culturalgold/#shop">Shop</a></li>
-            <li><a href="/culturalgold/about">About</a></li>
+            <li><a onClick={(e) => handleShopClick} href="/culturalgold/#shop">Shop</a></li>
+            {/* <li><a href="/culturalgold/about">About</a></li> */}
             <li><a href="#contact">Contact</a></li>
         </ul>
         </nav>    

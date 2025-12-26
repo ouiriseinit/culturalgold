@@ -51,6 +51,8 @@ main article h2 {
   border: solid var(--wood-red) 1px;
   animation: slide infinite 30s ease-in-out;
   border-radius: 4px;
+  top: 100%;
+  left: 0;
 }
 
 
