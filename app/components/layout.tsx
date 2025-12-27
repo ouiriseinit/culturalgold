@@ -78,12 +78,13 @@ function Nav() {
         if (window.location.pathname === '/culturalgold/') {
             document.querySelector('#shop')?.scrollIntoView({ behavior: 'smooth' });
         } else {
-            window.location.href = '/culturalgold/#shop';
+            window.location.href = 'https://ouiriseinit.github.io';
         }
     }
     return (
     <nav>
         <ul>
+            <li><a href="/culturalgold/">Home</a></li>
             <li><a onClick={(e) => handleShopClick} href="/culturalgold/#shop">Shop</a></li>
             {/* <li><a href="/culturalgold/about">About</a></li> */}
             <li><a href="#contact">Contact</a></li>
